@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dscat Coff | Café de especialidad colombiano</title>
+  <meta name="description" content="Reserva Huila: café de especialidad tostado en lotes pequeños. Pídelo por WhatsApp y recíbelo fresco.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="site-header">
+    <a href="#inicio" class="logo">Dscat Coff</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#producto">Café</a>
+      <a href="#por-que">Por qué Dscat</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <h1>El café que se queda en la memoria.</h1>
+        <p class="lead">Granos de Huila, tostados en lotes de 40 kilos y enviados esta misma semana. Sin intermediarios, sin café viejo en bodega.</p>
+        <div class="hero-actions">
+          <a href="#producto" class="btn btn-primary">Elegir mi café</a>
+          <a href="#por-que" class="btn btn-ghost">Cómo lo hacemos</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Origen</dt><dd>Huila, 1.750 msnm</dd></div>
+          <div><dt>Tueste</dt><dd>Medio</dd></div>
+          <div><dt>Notas</dt><dd>Panela, cacao, naranja</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="bean-svg">
+          <circle cx="200" cy="200" r="190" fill="var(--cereza)"/>
+          <g transform="rotate(-25 200 200)">
+            <ellipse cx="200" cy="200" rx="118" ry="165" fill="var(--tostado)"/>
+            <path d="M200 38 C 140 130, 262 270, 200 362" stroke="var(--crema)" stroke-width="12" fill="none" stroke-linecap="round" opacity=".9"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- PRODUCTO -->
+    <section class="product section" id="producto">
+      <div class="product-media">
+        <svg viewBox="0 0 300 380" class="bag-svg" role="img" aria-label="Bolsa de café Reserva Huila de Dscat Coff">
+          <path d="M60 40 L240 40 L262 340 Q262 356 246 356 L54 356 Q38 356 38 340 Z" fill="var(--tostado)"/>
+          <path d="M60 40 L240 40 L244 74 L56 74 Z" fill="#2a170e"/>
+          <rect x="56" y="30" width="188" height="14" rx="3" fill="var(--oro)"/>
+          <rect x="70" y="120" width="160" height="190" rx="6" fill="var(--crema)"/>
+          <text x="150" y="168" text-anchor="middle" font-family="'Young Serif', serif" font-size="26" fill="var(--tostado)">Dscat Coff</text>
+          <line x1="100" y1="186" x2="200" y2="186" stroke="var(--cereza)" stroke-width="2"/>
+          <text x="150" y="214" text-anchor="middle" font-family="'Instrument Sans', sans-serif" font-size="15" fill="var(--tostado)">Reserva Huila</text>
+          <text x="150" y="238" text-anchor="middle" font-family="'Instrument Sans', sans-serif" font-size="12" fill="var(--tostado)">Café de especialidad</text>
+          <circle cx="150" cy="276" r="16" fill="var(--cereza)"/>
+          <ellipse cx="150" cy="276" rx="7" ry="10" fill="var(--crema)" transform="rotate(-25 150 276)"/>
+        </svg>
+      </div>
+
+      <div class="product-info">
+        <h2>Reserva Huila</h2>
+        <p class="product-desc">Un café de cuerpo cremoso y final largo a panela. Cosechado a mano, lavado y secado al sol por familias caficultoras de Pitalito.</p>
+        <p class="price" id="price" aria-live="polite">$38.000</p>
+
+        <fieldset class="option">
+          <legend>Presentación</legend>
+          <div class="chips" id="sizeOptions">
+            <label><input type="radio" name="size" value="250" checked><span>250 g</span></label>
+            <label><input type="radio" name="size" value="500"><span>500 g</span></label>
+            <label><input type="radio" name="size" value="1000"><span>1 kg</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="option">
+          <legend>Molienda</legend>
+          <div class="chips" id="grindOptions">
+            <label><input type="radio" name="grind" value="Grano" checked><span>Grano entero</span></label>
+            <label><input type="radio" name="grind" value="Molido fino"><span>Espresso</span></label>
+            <label><input type="radio" name="grind" value="Molido medio"><span>Filtrado</span></label>
+          </div>
+        </fieldset>
+
+        <div class="buy-row">
+          <div class="qty" aria-label="Cantidad">
+            <button type="button" id="qtyMinus" aria-label="Restar uno">−</button>
+            <output id="qtyValue">1</output>
+            <button type="button" id="qtyPlus" aria-label="Sumar uno">+</button>
+          </div>
+          <button class="btn btn-primary btn-grow" id="addToCart">Agregar al carrito</button>
+        </div>
+        <p class="note">Envío a toda Colombia. Gratis en pedidos desde $120.000.</p>
+      </div>
+    </section>
+
+    <!-- POR QUÉ -->
+    <section class="why section" id="por-que">
+      <h2>Lo que hace distinto a Dscat Coff</h2>
+      <div class="why-grid">
+        <article>
+          <h3>Tostado a pedido</h3>
+          <p>Tostamos cada semana según los pedidos recibidos. Tu café sale de la tostadora y llega a tu casa en pocos días.</p>
+        </article>
+        <article>
+          <h3>Pago justo al caficultor</h3>
+          <p>Compramos directo a las fincas y pagamos por encima del precio de la bolsa. Sabes de dónde viene cada lote.</p>
+        </article>
+        <article>
+          <h3>Molido como lo necesitas</h3>
+          <p>Elige grano entero, espresso o filtrado. Lo molemos justo antes de empacar para conservar el aroma.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="reviews section" id="opiniones">
+      <h2>Lo que dicen quienes ya lo probaron</h2>
+      <div class="reviews-grid">
+        <blockquote>
+          <p>“Llevo años comprando café de especialidad y este es de los pocos que sabe igual en la última taza que en la primera.”</p>
+          <footer>Camila R., Bogotá</footer>
+        </blockquote>
+        <blockquote>
+          <p>“Lo pedí por WhatsApp un martes y el viernes ya lo estaba preparando. Todo fue sencillo.”</p>
+          <footer>Andrés M., Medellín</footer>
+        </blockquote>
+        <blockquote>
+          <p>“Se lo regalé a mi papá, que solo toma tinto de siempre, y ahora me lo pide cada mes.”</p>
+          <footer>Laura P., Cali</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="faq section" id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details>
+          <summary>¿Cómo hago mi pedido?</summary>
+          <p>Agrega tu café al carrito y pulsa “Pedir por WhatsApp”. Te llegará el resumen listo para enviarnos y confirmamos el pago y la dirección por ahí.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tarda en llegar?</summary>
+          <p>Despachamos los miércoles después de tostar. En ciudades principales llega entre 2 y 4 días hábiles.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto dura el café una vez abierto?</summary>
+          <p>Si lo guardas en un lugar fresco y cerrado, conserva su sabor unas 4 semanas. En grano dura más que molido.</p>
+        </details>
+        <details>
+          <summary>¿Qué medios de pago aceptan?</summary>
+          <p>Transferencia, Nequi y Daviplata. También podemos enviarte un link de pago con tarjeta si lo prefieres.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing">
+      <h2>Tu próxima taza ya está tostándose.</h2>
+      <a href="#producto" class="btn btn-primary">Pedir Reserva Huila</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="logo">Dscat Coff</p>
+    <p>Café de especialidad colombiano · Hecho en lotes pequeños</p>
+    <p class="copy">© <span id="year"></span> Dscat Coff. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CARRITO -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Tu carrito</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">Tu carrito está vacío. Elige una presentación y agrégala.</p>
+    <div class="drawer-foot">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn-whatsapp" id="checkout" disabled>Pedir por WhatsApp</button>
+      <button class="link-btn" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
